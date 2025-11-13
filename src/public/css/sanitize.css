@@ -1,0 +1,75 @@
+/* public/css/base.css - Sanitizeベースのスタイル */
+
+/* 1. box-sizingをborder-boxに設定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. マージンをリセット (要素が持つデフォルトマージンを消去) */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* 3. bodyの基本設定 */
+body {
+    /* スムーズなアニメーション/トランジションのために */
+    text-rendering: optimizeSpeed;
+    /* フォントの継承を強制 */
+    line-height: 1.5;
+}
+
+/* 4. 画像などの置換要素のデフォルト設定 */
+img,
+picture,
+video,
+canvas,
+svg {
+    /* 親要素の幅に合わせて伸縮 */
+    max-width: 100%;
+    /* ブロック要素として扱い、ベースライン下にできる隙間を消去 */
+    display: block;
+}
+
+/* 5. フォーム要素のフォント継承 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 6. a要素のテキスト装飾をリセット（必要に応じて個別に設定）*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 7. リストのデフォルト設定を削除 */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* 8. アクセシビリティ対応（フォーカス時のアウトラインを保持） */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
